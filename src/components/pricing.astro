@@ -17,6 +17,10 @@ const { plan } = Astro.props;
             : plan.price
         }
       </p>
+      <div>
+        <h4 class="text-lg font-medium text-gray-400">Mensualidad desde:</h4>
+        <span>{plan.mensualidad}</span>
+      </div>
       <!-- {
         plan.price.original && (
           <p class="mt-1 text-xl font-medium text-gray-400 line-through md:text-2xl">

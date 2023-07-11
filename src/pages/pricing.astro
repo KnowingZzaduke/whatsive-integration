@@ -7,73 +7,34 @@ import Pricing from "@components/pricing.astro";
 const pricing = [
   {
     name: "Personal",
-    price: "Free",
+    price: "$600",
+    mensualidad: "$5",
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
+      "Integración del sistema",
+      "Envío de mensajes ilimitados",
+      "Contactos ilimitados",
+      "Mensajes personalizados",
+      "Soporte",
     ],
     button: {
-      text: "Get Started",
-      link: "/",
-    },
-  },
-  {
-    name: "Startup",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
-    popular: true,
-    features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "#",
-    },
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    popular: false,
-    features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
-    ],
-    button: {
-      text: "Contact us",
+      text: "Contactar!",
       link: "/contact",
     },
   },
 ];
 ---
 
-<Layout title="Pricing">
+<Layout title="Precios">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="title">Precio</Fragment>
       <Fragment slot="desc"
-        >Simple & Predictable pricing. No Surprises.</Fragment
+        >Este es el precio de la integración y la mensualidad del sistema</Fragment
       >
     </Sectionhead>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+    <div class="w-80 text-center mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
   </Container>
